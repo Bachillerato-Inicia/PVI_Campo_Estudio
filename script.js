@@ -1,5 +1,18 @@
 // script.js
-
+// Los campos ocupacionales son los siguientes:
+// Ciencias Jurídicas (Tiene)
+// Ciencias Sociales (Tiene)
+// Humanidades (Tiene)
+// Ciencias Exactas (Tiene)
+// Ciencias de la Tierra y Agropecuarias (Agregar en Quiz 2)
+// Ciencias Económicas y Administrativas (Tiene) 
+// Artes (Tiene)
+// Ciencias Tecnológicas (Tiene)
+// Ciencias de la Educación (No tiene)
+// Estudios Mediales (No tiene)
+// Salud y Bienestar (Tiene)
+// Agronomía y Sistemas Naturales (No tiene) 
+// Ciencias Biológicas y Química (Tiene)
 document.getElementById('submitButton').addEventListener('click', function() {
     const objectType = document.getElementById('objectType').value;
     const taskType = document.getElementById('taskType').value;
@@ -22,13 +35,13 @@ document.getElementById('submitButton').addEventListener('click', function() {
     if ((objectType === 'hechos' && objectType === 'personas') &&
         (['comunicar', 'viajar', 'reflexionar', 'informar', 'escribir'].includes(taskType)) &&
         (['radios', 'aeropuertos', 'centros de investigación', 'periódicos', 'centros de idiomas'].includes(fieldType))) {
-        result = 'Ciencias Humanísticas';
+        result = 'Humanidades';
     }
 
     if ((objectType === 'personas' || objectType === 'datos') &&
         (['curar', 'diagnosticar', 'intervenir', 'analizar', 'prevenir', 'investigar'].includes(taskType)) &&
         (['hospitales', 'clínicas', 'laboratorios', 'consultorios', 'centros de investigación'].includes(fieldType))) {
-        result = 'Ciencias Médicas';
+        result = 'Salud y Bienestar';
     }
 
     if ((objectType === 'datos' || objectType === 'fenómenos') &&
@@ -40,7 +53,7 @@ document.getElementById('submitButton').addEventListener('click', function() {
     if ((objectType === 'datos' || objectType === 'fenómenos') &&
         (['sintetizar', 'teorizar', 'calcular', 'deducir'].includes(taskType)) &&
         (['investigación', 'servicio meteorológico'].includes(fieldType))) {
-        result = 'Ciencias Biológicas y Ciencias de la Atmósfera';
+        result = 'Ciencias Biológicas y Química';
     }
 
     if ((objectType === 'datos' || objectType === 'fenómenos') &&
@@ -58,7 +71,7 @@ document.getElementById('submitButton').addEventListener('click', function() {
     if ((objectType === 'objetos' || objectType === 'hechos') &&
         (['actuar', 'diseñar', 'representar', 'crear', 'proyectar', 'componer'].includes(taskType)) &&
         (['teatro', 'cine', 'ateliers', 'televisión', 'agencias publicitarias', 'conservatorios'].includes(fieldType))) {
-        result = 'Cs. Artísticas';
+        result = 'Artes';
     }
 
     if ((objectType === 'objetos') &&
